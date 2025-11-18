@@ -491,10 +491,20 @@
                                             <div class="ue-audio-player__container ue-audio-player__container--content"></div>
                                             <div class="ue-audio-controls">
                                                 <div class="ue-audio-player__container ue-audio-player__container--controls">
-                                                    <audio class="ue-audio-player-element ue-audio-player-element__controls" autoplay>
-                                                        <source src="/El espiritu de Dios esta en este lugar - Sesiones en vivo - Coro Cantaré.mp3" type="audio/mp3">
-                                                    </audio>
-                                                </div>
+    <audio id="miAudio" class="ue-audio-player-element ue-audio-player-element__controls" autoplay>
+        <source src="/El espiritu de Dios esta en este lugar - Sesiones en vivo - Coro Cantaré.mp3" type="audio/mp3">
+    </audio>
+</div>
+
+<script>
+    const audio = document.getElementById('miAudio');
+
+    // Cuando esté listo, saltar al segundo 3
+    audio.addEventListener('loadedmetadata', () => {
+        audio.currentTime = 6;   // segunda 3
+    });
+</script>
+
                                             </div>
                                         </div>
                                     </div>
@@ -1722,4 +1732,5 @@
 <!-- end Simple Custom CSS and JS -->
 </body>
 </html>
+
 
